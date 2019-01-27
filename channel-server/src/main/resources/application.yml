@@ -1,0 +1,33 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate.naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+  application:
+    name: channel-server
+  datasource:
+    username: root
+    password: william687
+    url: jdbc:mysql://176.122.133.13:3306/newdatasource
+    driver-class-name: com.mysql.jdbc.Driver
+  zipkin:
+    base-url: http://localhost:9411/
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1
+  resources:
+    static-locations: classpath:/static/
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

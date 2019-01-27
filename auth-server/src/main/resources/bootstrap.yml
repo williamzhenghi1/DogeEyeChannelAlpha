@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+        #拉取的环境
+      profile: dev
+      #name为指定的config文件名称
+      name: AuthServer
+      #要实现高可以就多启动几个实例就OK
+
+
+
+
+
+
+
